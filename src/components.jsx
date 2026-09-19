@@ -22,7 +22,7 @@ function useReveal(threshold = 0.06) {
       });
     }, {
       threshold,
-      rootMargin: '0px 0px -8% 0px'
+      rootMargin: '0px 0px 8% 0px'
     });
     io.observe(el);
     return () => io.disconnect();
