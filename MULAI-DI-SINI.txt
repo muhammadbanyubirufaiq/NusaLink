@@ -1,0 +1,22 @@
+CARA MEMBUKA NUSALINK
+
+1. Ekstrak ZIP ke folder baru, misalnya NusaLink-revisi.
+2. Buka folder hasil ekstraksi di VS Code.
+3. Pastikan package.json terlihat langsung di folder tersebut.
+4. Buka Terminal > New Terminal di folder itu.
+5. Jalankan: pnpm install
+6. Jalankan: pnpm dev
+7. Buka http://localhost:4173 atau alamat yang ditampilkan terminal.
+
+Node.js dan pnpm harus sudah terpasang.
+Build produksi: pnpm build
+Preview produksi: pnpm preview
+
+Jika muncul Command "dev" not found, terminal berada di folder yang salah.
+Di PowerShell jalankan: dir package.json
+Pindah dengan cd ke folder yang berisi package.json NusaLink, lalu ulangi.
+
+Jangan membuka index.html dengan klik dua kali.
+Perubahan lokal tidak otomatis memperbarui website online.
+Formulir tetap demo; tidak ada pengiriman atau penyimpanan data.
+Baca README.md dan CATATAN-REVISI.md untuk detail.

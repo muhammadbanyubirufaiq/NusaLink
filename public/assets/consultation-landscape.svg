@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="200" viewBox="0 0 440 200" fill="none">
+  <defs>
+    <linearGradient id="ground-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.65" stop-color="white"/>
+      <stop offset="1" stop-color="black"/>
+    </linearGradient>
+    <mask id="landscape-fade"><rect width="440" height="200" fill="url(#ground-fade)"/></mask>
+  </defs>
+  <g mask="url(#landscape-fade)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Quiet distant ridgelines. -->
+    <g stroke="#819da8" stroke-width="1" opacity=".36">
+      <path d="M12 123c27-7 43-37 68-37 25 0 30 15 47 15 29 0 47-61 77-61 19 0 36 31 58 42 29 14 36 4 58 17 21 13 41 24 106 27"/>
+      <path d="M138 92c24-3 40-23 55-23 17 0 31 16 47 19m100 12c14-9 27-25 41-25 13 0 25 18 38 21"/>
+      <path d="M35 62h24m-13-7h29m269-13h23m-8 7h26"/>
+    </g>
+    <!-- Small rural homes, kept subordinate to the terminal. -->
+    <g stroke="#95bbb9" stroke-width="1.4" opacity=".58">
+      <path d="m62 130 33-24 34 24H62Zm7 0v31h52v-31M89 161v-20h13v20m-25-23h6v7h-6m30-7h6v7h-6"/>
+      <path d="m137 141 26-18 26 18h-52Zm6 0v23h40v-23m-23 23v-14h9v14"/>
+      <path d="M38 159v-33m-12 19 12-23 12 23H26Zm4-13 8-18 8 18m166 33v-25m-9 14 9-19 9 19h-18"/>
+    </g>
+    <!-- Tilted flat satellite terminal and a simple ground stand. -->
+    <g stroke="#8cded0" stroke-width="1.8" opacity=".86">
+      <path d="m266 80 64-24q4-1 5 3l19 47q1 4-3 5l-63 23q-4 1-5-3l-20-46q-1-4 3-5Z" fill="#8cded0" fill-opacity=".035"/>
+      <path d="m272 84 57-21 17 42-57 21-17-42Z" opacity=".32" stroke-width="1"/>
+      <path d="m312 125 4 13v21m-20 10 20-10 25 9m-25-9v17m1-38h12"/>
+      <path d="M326 130c17 8 11 25 21 30 8 4 17 0 23 6" opacity=".42" stroke-width="1.2"/>
+    </g>
+    <!-- Two restrained signal arcs; static and decorative. -->
+    <g stroke="#8cded0" stroke-width="1.3">
+      <path d="M292 45c8-4 17-5 26-3" opacity=".5"/>
+      <path d="M287 34c12-6 24-7 36-3" opacity=".28"/>
+    </g>
+    <g stroke="#8eadae" stroke-width="1" opacity=".38">
+      <path d="M16 172c58-12 111-5 152-3 41 2 57-8 87-7m91 13c30-5 56-1 80 3M45 185c69-9 113 5 170-3 66-9 130 6 187 3M95 198c88-5 157-2 240 0"/>
+    </g>
+  </g>
+</svg>
