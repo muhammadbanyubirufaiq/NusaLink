@@ -108,13 +108,20 @@ export function Consultation() {
 }
 export function SectorsCarousel() {
   const trackRef = React.useRef(null);
+  const boundsFrameRef = React.useRef(0);
   const [atStart, setAtStart] = React.useState(true);
   const [atEnd, setAtEnd] = React.useState(false);
   const updateBounds = () => {
-    const el = trackRef.current;
-    if (!el) return;
-    setAtStart(el.scrollLeft <= 2);
-    setAtEnd(el.scrollLeft + el.clientWidth >= el.scrollWidth - 2);
+    if (boundsFrameRef.current) return;
+    boundsFrameRef.current = requestAnimationFrame(() => {
+      boundsFrameRef.current = 0;
+      const el = trackRef.current;
+      if (!el) return;
+      const nextAtStart = el.scrollLeft <= 2;
+      const nextAtEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 2;
+      setAtStart(current => current === nextAtStart ? current : nextAtStart);
+      setAtEnd(current => current === nextAtEnd ? current : nextAtEnd);
+    });
   };
   useEffect(() => {
     updateBounds();
@@ -128,6 +135,7 @@ export function SectorsCarousel() {
     ro?.observe(el);
     window.addEventListener('resize', updateBounds);
     return () => {
+      if (boundsFrameRef.current) cancelAnimationFrame(boundsFrameRef.current);
       el.removeEventListener('scroll', updateBounds);
       ro?.disconnect();
       window.removeEventListener('resize', updateBounds);
@@ -165,10 +173,13 @@ export function SectorsCarousel() {
     startX: 0,
     startScroll: 0
   });
+  const dragFrameRef = React.useRef(0);
+  const pendingScrollRef = React.useRef(0);
   const onPointerDown = e => {
     const el = trackRef.current;
     if (!el || e.pointerType !== 'mouse' || e.button !== 0) return;
     el.classList.add('is-dragging');
+    pendingScrollRef.current = el.scrollLeft;
     dragRef.current = {
       down: true,
       startX: e.clientX,
@@ -180,13 +191,24 @@ export function SectorsCarousel() {
     const d = dragRef.current;
     const el = trackRef.current;
     if (!d.down || !el) return;
-    el.scrollLeft = d.startScroll - (e.clientX - d.startX);
+    pendingScrollRef.current = d.startScroll - (e.clientX - d.startX);
+    if (dragFrameRef.current) return;
+    dragFrameRef.current = requestAnimationFrame(() => {
+      el.scrollLeft = pendingScrollRef.current;
+      dragFrameRef.current = 0;
+    });
   };
   const onPointerUp = () => {
+    const el = trackRef.current;
+    if (dragFrameRef.current && el) {
+      cancelAnimationFrame(dragFrameRef.current);
+      el.scrollLeft = pendingScrollRef.current;
+      dragFrameRef.current = 0;
+    }
     dragRef.current.down = false;
-    trackRef.current?.classList.remove('is-dragging');
+    el?.classList.remove('is-dragging');
   };
-  return <section id="sektor" className="section sectors"><div className="sectors-contour" aria-hidden="true"><svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="contour-fade"><stop offset="0" stopColor="white"/><stop offset=".72" stopColor="white"/><stop offset="1" stopColor="black"/></radialGradient><mask id="contour-mask"><rect width="1600" height="1000" fill="url(#contour-fade)"/><ellipse cx="430" cy="160" rx="470" ry="190" fill="black" opacity=".7"/></mask></defs><g mask="url(#contour-mask)" fill="none" stroke="#9acbbf" strokeWidth="1" strokeOpacity=".14">{Array.from({length:22}, (_, i) => <path key={i} vectorEffect="non-scaling-stroke" d={`M ${-240+i*13} ${130+i*24} C ${130+i*6} ${-220+i*20}, ${400+i*12} ${420+i*12}, ${780+i*9} ${160+i*27} S ${1540-i*5} ${280+i*24}, ${1570+i*18} ${650+i*22} S ${1020-i*11} ${1100-i*10}, ${790-i*8} ${700+i*10} S ${150+i*3} ${710+i*22}, ${-200+i*7} ${880+i*18}`}/>)}</g></svg></div><div className="sectors-content"><Reveal className="section-head"><div><Eyebrow>UNTUK MEREKA YANG TERUS BERGERAK</Eyebrow><h2>Beragam kebutuhan.<br /><span>Satu tujuan: terhubung.</span></h2></div><p>Dari ruang kelas hingga laut lepas, setiap lingkungan membutuhkan pendekatan yang berbeda.</p></Reveal><div className="sectors-controls"><button className="sector-nav prev" aria-label="Sektor sebelumnya" aria-disabled={atStart} disabled={atStart} onClick={() => scrollBy(-1)}><ArrowRight size={18} style={{
+  return <section id="sektor" className="section sectors"><div className="sectors-contour" aria-hidden="true" /><div className="sectors-content"><Reveal className="section-head"><div><Eyebrow>UNTUK MEREKA YANG TERUS BERGERAK</Eyebrow><h2>Beragam kebutuhan.<br /><span>Satu tujuan: terhubung.</span></h2></div><p>Dari ruang kelas hingga laut lepas, setiap lingkungan membutuhkan pendekatan yang berbeda.</p></Reveal><div className="sectors-controls"><button className="sector-nav prev" aria-label="Sektor sebelumnya" aria-disabled={atStart} disabled={atStart} onClick={() => scrollBy(-1)}><ArrowRight size={18} style={{
             transform: 'rotate(180deg)'
           }} /></button><button className="sector-nav next" aria-label="Sektor berikutnya" aria-disabled={atEnd} disabled={atEnd} onClick={() => scrollBy(1)}><ArrowRight size={18} /></button></div><div className="sector-track" ref={trackRef} tabIndex={0} role="region" aria-label="Sektor yang dilayani NusaLink" onKeyDown={onKey} onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onLostPointerCapture={onPointerUp} onDragStart={e => e.preventDefault()}>{sectors.map(([title, desc, img], i) => <Reveal as="article" className="sector-card" key={title}><div className={'sector-photo sector-photo--' + img}><Photo name={img} alt={'Visual ilustratif sektor ' + title} eager={i < 2} /></div><div className="sector-text"><span className="sector-num">0{i + 1}</span><h3>{title}</h3><p>{desc}</p></div></Reveal>)}</div></div></section>;
 }
