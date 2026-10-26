@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" fill="none">
+  <!-- Original schematic illustration, not a photograph or a particular product model. -->
+  <path d="M274 315l70 12 23 62-111-21z" fill="#233C4C" stroke="#607887" stroke-width="1.5"/>
+  <path d="M274 315l28 6-14 53-32-6z" fill="#385160"/>
+  <path d="M204 374l135-48 91 16-137 51z" fill="#1C3444" stroke="#607887" stroke-width="1.5"/>
+  <path d="M119 201l247-90 159 121-248 94z" fill="#DDE6E5" stroke="#F4F3EE" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M119 201v13l158 126v-14z" fill="#56707D" stroke="#859BA4" stroke-width="1.3"/>
+  <path d="M277 326l248-94v13l-248 95z" fill="#2C4657" stroke="#859BA4" stroke-width="1.3"/>
+  <path d="M139 201l224-81 142 110-225 85z" stroke="#B4C5C8" stroke-width="1"/>
+  <path d="M286 355c36 30 52 26 91 14l111-38c22-7 44-1 58 10" stroke="#80CDBB" stroke-width="2"/>
+  <path d="M518 298l95-37 104 47-97 40z" fill="#B7C8CE" stroke="#DDE6E5" stroke-width="1.5"/>
+  <path d="M518 298v39l102 46v-35z" fill="#253F50" stroke="#7A929E" stroke-width="1.5"/>
+  <path d="M620 348l97-40v39l-97 36z" fill="#142D3E" stroke="#7A929E" stroke-width="1.5"/>
+  <path d="M553 294v-87M679 305v-87" stroke="#DDE6E5" stroke-width="7" stroke-linecap="round"/>
+  <path d="M543 341l28 12M579 357l14 6" stroke="#647F8E" stroke-width="3"/>
+  <circle cx="607" cy="368" r="2.5" fill="#80CDBB"/>
+  <g stroke="#80CDBB" stroke-width="1.5" opacity=".75">
+    <path d="M589 222q33-22 63 0M600 233q21-14 41 0M612 243q9-6 17 0"/>
+  </g>
+</svg>

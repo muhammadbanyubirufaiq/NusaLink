@@ -1,0 +1,47 @@
+/* Contact-only styling. Native dialog provides a top layer and inert background. */
+.contact-hub{--contact-line:color-mix(in srgb,var(--color-muted) 16.0784%,transparent);background:var(--color-bg);color:var(--color-text);min-height:75vh;padding:53px 0 64px}
+.contact-hub .contact-shell{width:calc(100% - var(--gutter) - var(--gutter));max-width:1080px;margin:auto}
+.contact-hub h1,.contact-hub h2{font-weight:500;letter-spacing:-.02em}
+.contact-hub p{font-size:16px;line-height:1.65;color:var(--color-muted)}
+.contact-hub .contact-intro{padding-bottom:43px}
+.contact-hub .contact-eyebrow{font-size:11px;line-height:1.6;letter-spacing:1.5px;font-weight:600;color:var(--color-subtle);margin-bottom:20px}
+.contact-hub h1{font-size:clamp(40px,4vw,52px);line-height:1.1;font-weight:600;margin:0 0 23px}
+.contact-hub .contact-intro>p:last-child{font-size:18px;line-height:1.65;max-width:55ch}
+.contact-hub .contact-channels{display:grid;grid-template-columns:1fr 1fr;gap:70px;border-top:1px solid var(--contact-line);padding:34px 0 24px}
+.contact-hub .contact-channel{min-width:0}
+.contact-hub .contact-channel+.contact-channel{border-left:1px solid var(--contact-line);padding-left:50px}
+.contact-hub .contact-channel h2{font-size:18px;line-height:1.3;color:var(--color-soft);margin:0 0 15px}
+.contact-hub .contact-address{font-size:34px;line-height:1.2;color:var(--color-text);letter-spacing:-.015em;white-space:nowrap;user-select:text;margin-bottom:18px}
+.contact-hub .contact-description{max-width:37ch;min-height:53px;margin-bottom:25px}
+.contact-hub .button{min-height:50px;min-width:205px;border-radius:3px;font-size:14px;padding:14px 22px;gap:34px;justify-content:space-between}
+.contact-hub .button.primary{background:var(--color-button);color:var(--color-bg);border:1px solid var(--color-button)}
+.contact-hub .button.primary:hover{background:var(--color-button-hover);border-color:var(--color-button-hover)}
+.contact-hub .button.secondary{background:transparent;border:1px solid color-mix(in srgb,var(--color-subtle) 40.0000%,transparent);color:var(--color-text)}
+.contact-hub .button.secondary:hover{border-color:var(--color-mint);color:var(--color-mint)}
+.contact-hub .contact-copy-row{display:flex;align-items:center;flex-wrap:wrap;gap:0 17px;margin-top:11px;min-height:44px}
+.contact-hub .contact-copy{display:inline-flex;align-items:center;gap:9px;min-height:44px;border:0;border-radius:0;background:transparent;color:var(--color-muted);font-size:13px;line-height:1.5;padding:10px 0}
+.contact-hub .contact-copy:hover{color:var(--color-mint)}
+.contact-hub .contact-copy-row [role=status]{color:var(--color-mint);font-size:12px;line-height:1.5}
+.contact-hub .contact-hours{display:flex;align-items:baseline;gap:42px;border-top:1px solid var(--contact-line);padding:24px 0}
+.contact-hub .contact-hours h2{font-size:16px;line-height:1.5;margin:0;color:var(--color-text)}
+.contact-hub .contact-hours p{font-size:15px;line-height:1.6}
+.contact-hub .contact-support{display:grid;grid-template-columns:1.2fr 1fr;gap:100px;border-top:1px solid var(--contact-line);padding-top:33px}
+.contact-hub .contact-support h2{font-size:24px;line-height:1.2;margin:0 0 19px}
+.contact-hub .contact-support p{font-size:15px;max-width:50ch}
+.contact-hub .contact-support nav a{display:flex;align-items:center;justify-content:space-between;gap:30px;min-height:44px;max-width:310px;font-size:14px;line-height:1.4;color:var(--color-soft);padding:10px 0}
+.contact-hub .contact-support nav a:hover{color:var(--color-mint)}
+.contact-hub .contact-note{margin-top:31px;font-size:12px;line-height:1.6;color:var(--color-subtle)}
+.contact-hub a:focus-visible,.contact-hub button:focus-visible{outline:2px solid var(--color-mint);outline-offset:5px}
+.contact-hub .contact-dialog{position:fixed;inset:0;width:min(520px,calc(100vw - 40px));max-width:none;max-height:calc(100svh - 40px);overflow:auto;padding:35px;margin:auto;border:1px solid var(--color-border-strong);border-radius:4px;background:var(--color-bg);color:var(--color-text);box-shadow:none}
+.contact-hub .contact-dialog::backdrop{background:color-mix(in srgb,var(--color-footer) 80.0000%,transparent)}
+.contact-hub .contact-dialog h2{font-size:28px;line-height:1.2;margin:12px 32px 19px 0}
+.contact-hub .contact-dialog-close{display:flex;align-items:center;justify-content:center;position:absolute;top:10px;right:10px;width:44px;height:44px;border:0;border-radius:0;background:transparent;color:var(--color-soft);padding:10px}
+.contact-hub .contact-dialog-close:hover{color:var(--color-mint)}
+.contact-hub .contact-dialog-value{font-size:23px;color:var(--color-text);line-height:1.3;white-space:nowrap;margin-bottom:22px;user-select:text}
+.contact-hub .contact-dialog #contact-dialog-description{font-size:16px;line-height:1.65;max-width:46ch}
+.contact-hub .contact-dialog-done{margin-top:28px;min-width:125px;justify-content:center}
+@media(max-width:1100px){.contact-hub .contact-channels{gap:40px}.contact-hub .contact-channel+.contact-channel{padding-left:35px}.contact-hub .contact-address{font-size:30px}.contact-hub .contact-support{gap:65px}}
+@media(max-width:760px){.contact-hub{padding:31px 0 58px}.contact-hub .contact-channels{gap:28px}.contact-hub .contact-channel+.contact-channel{padding-left:25px}.contact-hub .contact-address{font-size:27px}.contact-hub .contact-support{gap:42px}.contact-hub .contact-support h2{font-size:23px}}
+@media(max-width:600px){.contact-hub{padding:34px 0 48px}.contact-hub h1{font-size:38px;line-height:1.08;margin-bottom:20px}.contact-hub .contact-eyebrow{font-size:10px;letter-spacing:1.4px;margin-bottom:17px}.contact-hub .contact-intro{padding-bottom:31px}.contact-hub .contact-intro>p:last-child{font-size:17px}.contact-hub .contact-channels{grid-template-columns:minmax(0,1fr);gap:26px;padding:29px 0 22px}.contact-hub .contact-channel+.contact-channel{padding:27px 0 0;border-left:0;border-top:1px solid var(--contact-line)}.contact-hub .contact-channel h2{font-size:17px;margin-bottom:14px}.contact-hub .contact-address{font-size:30px;margin-bottom:17px}.contact-hub .contact-description{font-size:16px;min-height:0;max-width:36ch;margin-bottom:23px}.contact-hub .contact-channel>.button{width:100%;max-width:340px}.contact-hub .contact-copy-row{margin-top:8px}.contact-hub .contact-hours{flex-direction:column;gap:9px;padding:23px 0}.contact-hub .contact-hours p{font-size:14px}.contact-hub .contact-support{grid-template-columns:minmax(0,1fr);gap:29px;padding-top:29px}.contact-hub .contact-support h2{font-size:24px;margin-bottom:17px}.contact-hub .contact-support nav a{max-width:none}.contact-hub .contact-note{margin-top:28px;font-size:12px}.contact-hub .contact-dialog{padding:29px 24px}.contact-hub .contact-dialog h2{font-size:25px;margin-right:26px}.contact-hub .contact-dialog-value{font-size:23px}.contact-hub .contact-dialog-done{width:100%}}
+@media(max-width:360px){.contact-hub h1{font-size:35px}.contact-hub .contact-address{font-size:27px}.contact-hub .contact-hours p>span:last-child{display:block}.contact-hub .contact-hours p>span[aria-hidden]{display:none}.contact-hub .contact-dialog{width:calc(100vw - 30px);padding:28px 21px}.contact-hub .contact-dialog-value{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.contact-hub *,.contact-hub *::before,.contact-hub *::after{scroll-behavior:auto;transition:none;animation:none}}

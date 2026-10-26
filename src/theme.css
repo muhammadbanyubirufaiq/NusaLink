@@ -1,0 +1,46 @@
+/* NusaLink palette. Shared by all pages; geometry and motion stay in component styles. */
+:root{
+  color-scheme:dark;
+  --color-bg:#071019;
+  --color-footer:#050C13;
+  --color-surface:#101C26;
+  --color-surface-raised:#172833;
+  --color-surface-active:#1A303E;
+  --color-text:#F4F3EE;
+  --color-soft:#D4DFE3;
+  --color-muted:#B5C5CF;
+  --color-subtle:#A9BCC8;
+  --color-mint:#80CDBB;
+  --color-button:#E7EEE9;
+  --color-button-hover:#C8DFDF;
+  --color-error:#FFC7B8;
+  --color-error-border:#E6A291;
+  --color-success:var(--color-mint);
+  --color-decoration:#53616A;
+  --color-border-strong:#526D7D;
+  --color-black:#000000;
+  --color-line:color-mix(in srgb,var(--color-muted) 16%,transparent);
+  --color-border:color-mix(in srgb,var(--color-subtle) 36%,transparent);
+  --color-nav-glass:color-mix(in srgb,var(--color-bg) 90%,transparent);
+  --color-dropdown-glass:color-mix(in srgb,var(--color-surface) 94%,transparent);
+  --color-selection:color-mix(in srgb,var(--color-mint) 25%,transparent);
+}
+
+/* Colour states only: no dimensions, opacity, motion, or focus geometry changes. */
+::selection{background:var(--color-selection);color:var(--color-text)}
+input::placeholder,textarea::placeholder{color:var(--color-subtle)}
+input,select,textarea{caret-color:var(--color-mint);accent-color:var(--color-mint)}
+.navbar.floating .nav-pill{background:var(--color-nav-glass)}
+.nav-dropdown{background:var(--color-dropdown-glass)}
+.navbar:has(.mobile-nav) .nav-pill{background:var(--color-nav-glass)}
+.navbar .mobile-nav .nav-dropdown{background:color-mix(in srgb,var(--color-text) 3%,transparent)}
+.footer{background:var(--color-footer)}
+.button.primary:not(:disabled):active,.nav-cta:active{background:var(--color-mint);border-color:var(--color-mint);color:var(--color-bg)}
+.button.secondary:not(:disabled):active{background:color-mix(in srgb,var(--color-mint) 12%,transparent);border-color:var(--color-mint);color:var(--color-text)}
+button.button.primary:disabled,button.button.secondary:disabled{background:var(--color-surface);color:var(--color-subtle);border-color:var(--color-border)}
+.sector-nav:disabled{color:var(--color-subtle)}
+input:disabled,select:disabled,textarea:disabled{background:var(--color-surface);color:var(--color-subtle);border-color:var(--color-line)}
+input[aria-invalid=true],select[aria-invalid=true],textarea[aria-invalid=true]{border-color:var(--color-error-border)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .navbar.floating .nav-pill,.nav-dropdown,.navbar:has(.mobile-nav) .nav-pill{background:var(--color-surface)}
+}

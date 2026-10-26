@@ -1,0 +1,74 @@
+/* Paket & Harga only. Quiet category groups with aligned specification columns. */
+.pricing-page{background:var(--color-bg);color:var(--color-text);min-height:75vh;padding:43px 0 56px;--pricing-line:var(--color-line)}
+.pricing-page .pricing-shell{width:calc(100% - var(--gutter) - var(--gutter));max-width:1240px;margin:auto}
+.pricing-page p{color:var(--color-muted)}
+.pricing-page h1,.pricing-page h2,.pricing-page h3{font-weight:600;letter-spacing:-.02em}
+.pricing-page .pricing-intro{text-align:center;margin:0 auto 34px;max-width:650px}
+.pricing-page .pricing-eyebrow{font-size:10px;line-height:1.5;letter-spacing:1.5px;color:var(--color-subtle);font-weight:600;margin:0 0 17px}
+.pricing-page h1{font-size:44px;line-height:1.1;margin:0 0 16px}
+.pricing-page .pricing-intro>p:last-child{font-size:16px;line-height:1.6}
+.pricing-page .pricing-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.pricing-page .pricing-category{min-width:0;background:var(--color-surface);border-radius:5px;padding:28px 26px 0}
+.pricing-page .pricing-category-heading h2{font-size:27px;line-height:1.2;margin:0 0 10px}
+.pricing-page .pricing-category-heading>p{font-size:14px;line-height:1.55;min-height:44px;max-width:34ch}
+.pricing-page .pricing-features{margin:22px 0 24px}
+.pricing-page .pricing-features ul{list-style:none;padding:0;margin:0;display:grid;gap:7px}
+.pricing-page .pricing-features li{font-size:14px;line-height:1.5;color:var(--color-soft)}
+.pricing-page .pricing-option{border-top:1px solid var(--pricing-line);padding:22px 0 24px}
+.pricing-page .pricing-option-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:13px}
+.pricing-page .pricing-option h3{font-size:21px;line-height:1.2;margin:0}
+.pricing-page .pricing-monthly{display:flex;align-items:baseline;gap:4px;white-space:nowrap;line-height:1.2}
+.pricing-page .pricing-monthly strong{color:var(--color-text);font-size:24px;font-weight:600;letter-spacing:-.025em}
+.pricing-page .pricing-monthly>span{font-size:12px;color:var(--color-subtle)}
+.pricing-page .pricing-specs{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:8px;margin:0 0 19px}
+.pricing-page .pricing-specs>div{min-width:0}
+.pricing-page .pricing-specs dt{font-size:12px;line-height:1.5;color:var(--color-subtle);margin-bottom:7px}
+.pricing-page .pricing-specs dd{font-size:19px;font-weight:500;line-height:1.2;margin:0;white-space:nowrap;color:var(--color-text)}
+.pricing-page .pricing-specs dd>span{font-size:12px;font-weight:400;color:var(--color-soft)}
+.pricing-page .pricing-installation{margin:0 0 18px}
+.pricing-page .pricing-installation>div{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.pricing-page .pricing-installation dt{font-size:12px;line-height:1.5;color:var(--color-soft)}
+.pricing-page .pricing-installation dt>span{display:block;font-size:11px;color:var(--color-subtle);margin-top:2px}
+.pricing-page .pricing-installation dd{font-size:14px;line-height:1.4;font-weight:400;white-space:nowrap;margin:0;color:var(--color-soft)}
+.pricing-page .pricing-choose{width:100%;min-height:46px;border:1px solid var(--color-border);background:transparent;color:var(--color-text);border-radius:3px;font-size:13px;font-weight:600;line-height:1.4;padding:12px 14px;gap:10px}
+.pricing-page .pricing-choose:hover{background:color-mix(in srgb,var(--color-text) 5%,transparent);border-color:var(--color-text)}
+.pricing-page .pricing-choose svg{flex:none}
+.pricing-page a:focus-visible{outline:2px solid var(--color-mint);outline-offset:4px}
+.pricing-page .pricing-comparison-note{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:23px 0 0}
+.pricing-page .pricing-comparison-note p{font-size:12px;line-height:1.65;color:var(--color-subtle);max-width:76ch}
+.pricing-page .pricing-included{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:12%;padding:62px 0 53px;margin-top:43px;border-top:1px solid var(--pricing-line)}
+.pricing-page .pricing-included-heading h2{font-size:38px;line-height:1.1;margin:0 0 22px;max-width:20ch}
+.pricing-page .pricing-included-heading>p:last-child{font-size:16px;line-height:1.65;max-width:36ch}
+.pricing-page .pricing-service-details{min-width:0}
+.pricing-page .pricing-detail+.pricing-detail{border-top:1px solid var(--pricing-line);margin-top:24px;padding-top:24px}
+.pricing-page .pricing-detail h3{font-size:19px;line-height:1.3;margin:0 0 13px}
+.pricing-page .pricing-detail p{font-size:14px;line-height:1.7;max-width:65ch}
+.pricing-page .pricing-extras{margin:0 0 17px}
+.pricing-page .pricing-extras>div{display:flex;justify-content:space-between;align-items:baseline;gap:24px;font-size:14px;line-height:1.5}
+.pricing-page .pricing-extras>div+div{margin-top:12px}
+.pricing-page .pricing-extras dt{color:var(--color-soft)}
+.pricing-page .pricing-extras dd{margin:0;text-align:right;white-space:nowrap;font-weight:500}
+.pricing-page .pricing-extras dd>span{display:block;font-size:10px;line-height:1.6;font-weight:400;color:var(--color-subtle);margin-top:2px}
+.pricing-page .pricing-special{display:flex;align-items:center;justify-content:space-between;gap:45px;border-top:1px solid var(--pricing-line);padding-top:34px}
+.pricing-page .pricing-special h2{font-size:26px;line-height:1.25;margin:0 0 13px;max-width:40ch}
+.pricing-page .pricing-special p{font-size:15px;line-height:1.65;max-width:60ch}
+.pricing-page .pricing-special .text-link{font-size:14px;flex:none;color:var(--color-text);border-color:var(--color-border);min-height:44px;gap:24px}
+.pricing-page .pricing-special .text-link:hover{color:var(--color-mint);border-color:var(--color-mint)}
+.pricing-page .pricing-demo{font-size:12px;line-height:1.7;color:var(--color-subtle);margin-top:35px;max-width:100ch}
+@media(max-width:1150px){.pricing-page .pricing-category{padding:25px 20px 0}.pricing-page .pricing-categories{gap:14px}.pricing-page .pricing-monthly strong{font-size:22px}.pricing-page .pricing-option-heading{gap:8px}.pricing-page .pricing-specs dt{font-size:11px}.pricing-page .pricing-features{min-height:77px}.pricing-page .pricing-category-heading>p{min-height:44px}}
+@media(max-width:950px) and (min-width:701px){.pricing-page .pricing-option-heading{align-items:flex-start;flex-direction:column;gap:8px}.pricing-page .pricing-category{padding-left:17px;padding-right:17px}.pricing-page .pricing-monthly strong{font-size:23px}.pricing-page .pricing-category-heading>p{min-height:66px}.pricing-page .pricing-specs dt{min-height:33px}.pricing-page .pricing-features{min-height:103px}.pricing-page .pricing-choose{font-size:12px;padding:12px 10px}}
+@media(max-width:700px){.pricing-page{padding:23px 0 42px}.pricing-page .pricing-intro{text-align:left;margin-bottom:28px;max-width:520px}.pricing-page h1{font-size:39px;margin-bottom:16px}.pricing-page .pricing-intro>p:last-child{font-size:16px;max-width:32ch}.pricing-page .pricing-categories{grid-template-columns:minmax(0,1fr);gap:22px;max-width:520px;margin:auto}.pricing-page .pricing-category{padding:25px 23px 0}.pricing-page .pricing-category-heading h2{font-size:28px}.pricing-page .pricing-category-heading>p{min-height:0;font-size:15px;max-width:40ch}.pricing-page .pricing-features{margin:22px 0 24px;min-height:0}.pricing-page .pricing-features li{font-size:14px}.pricing-page .pricing-option{padding:22px 0 24px}.pricing-page .pricing-option-heading{margin-bottom:13px;gap:10px}.pricing-page .pricing-monthly strong{font-size:25px}.pricing-page .pricing-specs dd{font-size:20px}.pricing-page .pricing-installation dt{font-size:13px}.pricing-page .pricing-installation dd{font-size:15px}.pricing-page .pricing-choose{min-height:48px;font-size:13px;padding:13px 15px}.pricing-page .pricing-comparison-note{grid-template-columns:minmax(0,1fr);gap:14px;padding-top:22px;max-width:520px;margin:auto}.pricing-page .pricing-included{grid-template-columns:minmax(0,1fr);gap:30px;padding:39px 0 35px;margin-top:34px}.pricing-page .pricing-included-heading h2{font-size:33px;max-width:22ch;margin-bottom:20px}.pricing-page .pricing-included-heading h2 br{display:none}.pricing-page .pricing-included-heading>p:last-child{max-width:55ch;font-size:16px}.pricing-page .pricing-detail h3{font-size:20px}.pricing-page .pricing-detail p{font-size:15px}.pricing-page .pricing-special{flex-direction:column;align-items:flex-start;gap:16px;padding-top:29px}.pricing-page .pricing-special h2{font-size:27px;max-width:23ch}.pricing-page .pricing-special .text-link{font-size:15px}.pricing-page .pricing-demo{margin-top:26px}}
+@media(max-width:360px){.pricing-page h1{font-size:36px}.pricing-page .pricing-category{padding:23px 18px 0}.pricing-page .pricing-monthly strong{font-size:23px}.pricing-page .pricing-option h3{font-size:21px}.pricing-page .pricing-specs dt{font-size:11px;min-height:33px}.pricing-page .pricing-choose{font-size:12px}.pricing-page .pricing-extras>div{gap:12px;font-size:13px}}
+@media(prefers-reduced-motion:reduce){.pricing-page *,.pricing-page *::before,.pricing-page *::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* Keep comparison rows aligned when the longer category heading wraps. */
+.pricing-page .pricing-category-heading h2{min-height:65px}
+.pricing-page .pricing-category-heading>p{min-height:66px}
+.pricing-page .pricing-allocation{font-size:12px;line-height:1.6;color:var(--color-subtle);margin:-7px 0 17px}
+.pricing-page .pricing-extras dt>small{display:block;font-size:12px;line-height:1.6;font-weight:400;color:var(--color-subtle);margin-top:5px}
+.pricing-page .pricing-detail p+p{margin-top:12px}
+@media(max-width:700px){.pricing-page .pricing-category-heading h2,.pricing-page .pricing-category-heading>p{min-height:0}}
+@media(min-width:1151px){.pricing-page .pricing-category-heading h2{min-height:0}.pricing-page .pricing-category-heading>p{min-height:44px}}
+
+/* Normal document header is 77 px on small screens. */
+@media(max-width:600px){.pricing-page{padding-top:35px}}

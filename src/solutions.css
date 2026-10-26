@@ -1,0 +1,95 @@
+/* Calm editorial layout; changes are limited to the technology page. */
+.information-page.technology-page{--muted:var(--color-muted);--teal:var(--color-mint);--line:color-mix(in srgb,var(--color-muted) 16.0784%,transparent);background:var(--color-bg);color:var(--color-text)}
+.technology-page .tech-wrap{padding-left:var(--gutter);padding-right:var(--gutter)}
+.technology-page h1,.technology-page h2,.technology-page h3{font-weight:600;letter-spacing:-.025em}
+.technology-page h2{font-size:clamp(35px,3.3vw,46px);line-height:1.12;text-wrap:balance}
+.technology-page p{font-size:17px;line-height:1.65}
+.technology-page .eyebrow{font-size:11px;letter-spacing:1.5px;color:var(--color-subtle);gap:0;margin-bottom:22px}
+.technology-page .eyebrow>span{display:none}
+.technology-page .tech-fine{font-size:14px;line-height:1.65;color:var(--color-subtle)}
+.tech-opening{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:8%;align-items:center;padding-top:49px;padding-bottom:62px}
+.tech-opening-copy{min-width:0}
+.tech-back{display:inline-block;font-size:13px;color:var(--color-subtle);padding:8px 0;margin-bottom:24px}
+.tech-back:hover{color:var(--color-text)}
+.tech-opening h1{font-size:clamp(44px,4.3vw,60px);line-height:1.06;letter-spacing:-.03em;text-wrap:initial;margin-bottom:27px}
+.technology-page .tech-opening-copy>p:last-child{font-size:18px;line-height:1.6;max-width:40ch}
+.tech-opening-visual,.tech-photo{margin:0;min-width:0}
+.tech-opening-photo{display:block;width:100%;height:480px;object-fit:cover;object-position:65% 50%;border-radius:3px}
+.tech-opening-visual figcaption,.tech-photo figcaption{font-size:12px;line-height:1.55;color:var(--color-subtle);margin-top:12px}
+.tech-foundation{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:8%;align-items:start;padding-top:24px;padding-bottom:70px}
+.technology-page .tech-foundation h2{font-size:clamp(28px,2.35vw,34px);line-height:1.18;max-width:25ch}
+.tech-foundation>div{max-width:58ch}.tech-foundation .tech-fine{margin-top:17px}
+.tech-section{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:8%;align-items:center;padding-top:76px;padding-bottom:76px}
+.tech-copy{min-width:0}.tech-copy h2{margin-bottom:27px}
+.tech-copy>p{max-width:48ch;margin-top:20px}
+.tech-use{margin-top:27px;max-width:46ch}
+.technology-page .tech-use h3{font-size:14px;font-weight:600;letter-spacing:0;line-height:1.5;margin-bottom:7px;color:var(--color-soft)}
+.technology-page .tech-use p{font-size:15px;line-height:1.6}
+.tech-satellite,.tech-hybrid{border-top:1px solid var(--line)}
+.tech-diagram{margin:0;min-width:0}
+.network-equipment{display:block;width:100%;height:auto;margin:0 0 18px;aspect-ratio:5/3}
+.satellite-flow{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;padding:0;margin:0}
+.satellite-flow li{position:relative;min-width:0}
+.satellite-flow li:not(:last-child):after{content:'\2194';position:absolute;top:0;right:-20px;color:var(--color-mint);font-size:16px}
+.satellite-flow strong{display:block;font-size:16px;font-weight:600;line-height:1.4}
+.satellite-flow span{display:block;font-size:12px;line-height:1.55;color:var(--color-subtle);margin-top:5px}
+.tech-diagram figcaption{font-size:13px;line-height:1.65;color:var(--color-subtle);margin-top:24px;max-width:63ch}
+/* The photograph is one broad pause between the diagram-led chapters. */
+.tech-wifi{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:34px 8%;padding-top:24px}
+.tech-wifi-visual{display:contents}
+.tech-photo img{display:block;width:100%;height:auto;object-fit:cover;border-radius:3px}
+.tech-wifi .tech-photo{grid-column:1/-1;grid-row:1}
+.tech-wifi .tech-photo img{aspect-ratio:2.9;object-position:50% 47%}
+.tech-wifi .tech-copy{grid-column:1;grid-row:2}
+.wifi-distribution{grid-column:2;grid-row:2;align-self:center;min-width:0}
+.wifi-flow{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.wifi-flow li{position:relative;min-width:0}
+.wifi-flow li:not(:last-child):after{content:'\2192';position:absolute;top:0;right:-16px;color:var(--color-mint);font-size:16px}
+.wifi-flow strong{display:block;font-size:17px;line-height:1.4;font-weight:600;max-width:13ch}
+.wifi-flow small{display:block;font-size:13px;line-height:1.65;margin-top:8px;color:var(--color-subtle)}
+.technology-page .wifi-note{font-size:14px;max-width:47ch;margin-top:26px}
+.hybrid-diagram{padding:8px 20px}
+.tech-node{display:flex;align-items:center;gap:14px;min-width:0}
+.tech-node>svg{color:var(--color-mint);flex:none}
+.tech-node strong{display:block;font-size:18px;font-weight:600;line-height:1.3}
+.tech-node span{display:block;color:var(--color-subtle);font-size:13px;line-height:1.6;margin-top:8px}
+.hybrid-sources{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.hybrid-sources .tech-node{flex-direction:column;text-align:center;gap:14px}
+.hybrid-sources .tech-node>svg{width:28px;height:28px}
+.hybrid-lines{display:flex;justify-content:center;margin:24px auto 0;width:55%;height:32px}
+.hybrid-lines i{width:50%;border-bottom:1px solid color-mix(in srgb,var(--color-mint) 50.1961%,transparent)}
+.hybrid-lines i:first-child{border-left:1px solid color-mix(in srgb,var(--color-mint) 50.1961%,transparent)}
+.hybrid-lines i:last-child{border-right:1px dashed color-mix(in srgb,var(--color-mint) 50.1961%,transparent);border-bottom-style:dashed}
+.hybrid-router{flex-direction:column;text-align:center;border:1px solid color-mix(in srgb,var(--color-muted) 25.0980%,transparent);padding:23px 18px;max-width:300px;margin:auto;gap:12px}
+.hybrid-router>svg{width:30px;height:30px}
+.hybrid-down{display:block;color:var(--color-mint);margin:20px auto}
+.hybrid-destination{justify-content:center}
+.hybrid-diagram figcaption{margin-top:25px}
+.tech-energy{padding-top:24px}
+.tech-energy>.tech-copy{grid-column:2;grid-row:1}.tech-energy>.energy-photo{grid-column:1;grid-row:1}
+.tech-energy .tech-photo img{aspect-ratio:1.2;object-position:52% center}
+.tech-management{padding-top:72px;padding-bottom:72px;border-top:1px solid var(--line)}
+.management-heading{text-align:center;max-width:720px;margin:0 auto 44px}
+.management-heading>p:last-child{max-width:56ch;margin:24px auto 0}
+.management-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 42px}
+.management-list li{grid-column:span 2;min-width:0}
+.management-list li:nth-child(4){grid-column:2/4}.management-list li:nth-child(5){grid-column:4/6}
+.management-list h3{font-size:23px;line-height:1.3;margin-bottom:12px}
+.technology-page .management-list p{font-size:16px;line-height:1.65;max-width:42ch}
+.technology-page .management-note{max-width:95ch;margin:34px auto 0;text-align:center}
+.tech-cta{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:70px;align-items:center;padding-top:68px;padding-bottom:76px;border-top:1px solid var(--line)}
+.tech-cta h2{font-size:clamp(35px,3.1vw,44px)}
+.tech-cta-copy>p{max-width:53ch;margin-top:24px;font-size:17px}
+.tech-actions{display:flex;flex-direction:column;gap:14px;min-width:232px}
+.technology-page .button{font-size:14px;min-height:50px;padding:14px 23px;border-radius:3px;gap:28px;justify-content:space-between}
+.technology-page .primary{background:var(--color-button);color:var(--color-bg)}.technology-page .primary:hover{background:var(--color-button-hover)}
+.technology-page .secondary{background:transparent;border-color:color-mix(in srgb,var(--color-muted) 50.1961%,transparent);color:var(--color-text)}.technology-page .secondary:hover{background:color-mix(in srgb,var(--color-muted) 7.0588%,transparent);border-color:var(--color-muted)}
+.technology-page a:focus-visible{outline:2px solid var(--color-mint);outline-offset:5px}
+@media(min-width:1800px){.tech-opening-photo{height:520px}.tech-opening{padding-top:56px}}
+@media(max-width:1100px){.tech-opening{padding-top:36px;gap:6%}.tech-opening h1{font-size:50px}.tech-opening-photo{height:440px}.tech-section,.tech-foundation{gap:6%}.satellite-flow{gap:16px}.satellite-flow li:not(:last-child):after{right:-15px}.satellite-flow strong{font-size:15px}.wifi-flow{gap:20px}.wifi-flow strong{font-size:16px}.management-list{gap:30px}.management-list h3{font-size:22px}}
+@media(max-width:800px){.tech-opening,.tech-foundation,.tech-section{grid-template-columns:minmax(0,1fr);gap:28px}.tech-opening{padding-top:23px;padding-bottom:40px}.tech-opening h1{font-size:48px}.tech-back{margin-bottom:20px}.technology-page .tech-opening-copy>p:last-child{max-width:48ch;font-size:17px}.tech-opening-photo{height:auto;aspect-ratio:1.6}.tech-foundation{padding-top:12px;padding-bottom:52px}.technology-page .tech-foundation h2{font-size:31px;max-width:28ch}.tech-section{padding-top:55px;padding-bottom:55px}.technology-page h2{font-size:38px}.tech-copy>p{max-width:60ch}.tech-use{max-width:55ch}.satellite-diagram{max-width:600px;margin:auto}.tech-wifi .tech-photo{grid-column:1;grid-row:2}.tech-wifi .tech-copy{grid-column:1;grid-row:1}.tech-wifi .tech-photo img{aspect-ratio:1.8}.wifi-distribution{grid-column:1;grid-row:3}.hybrid-diagram{max-width:520px;width:100%;padding:8px 12px;margin:auto}.tech-energy>.tech-copy{grid-column:1;grid-row:1}.tech-energy>.energy-photo{grid-column:1;grid-row:2}.tech-energy .tech-photo img{aspect-ratio:1.35}.tech-management{padding-top:55px;padding-bottom:55px}.management-heading{text-align:left;margin:0 0 32px}.management-heading>p:last-child{margin:22px 0 0}.management-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.management-list li,.management-list li:nth-child(4),.management-list li:nth-child(5){grid-column:auto}.management-list li:last-child{grid-column:1/-1}.technology-page .management-note{text-align:left;margin-top:28px}.tech-cta{grid-template-columns:minmax(0,1fr);gap:28px;padding-top:55px;padding-bottom:62px}.tech-cta h2{font-size:38px}.tech-actions{flex-direction:row;flex-wrap:wrap;min-width:0}.tech-actions .button{min-width:220px}}
+@media(max-width:480px){.technology-page p{font-size:16px}.technology-page h2{font-size:34px}.technology-page .eyebrow{font-size:10px;margin-bottom:18px}.tech-opening{padding-top:27px;padding-bottom:35px}.tech-opening h1{font-size:43px;margin-bottom:24px}.tech-opening-photo{aspect-ratio:1.4;object-position:67% center}.technology-page .tech-foundation h2{font-size:28px}.tech-copy h2{margin-bottom:23px}.tech-copy>p{margin-top:18px}.tech-use{margin-top:23px}.network-equipment{margin-bottom:20px}.satellite-flow{grid-template-columns:1fr;gap:27px;padding-left:12px}.satellite-flow li{display:grid;grid-template-columns:100px minmax(0,1fr);gap:14px;align-items:baseline}.satellite-flow strong{font-size:16px}.satellite-flow span{font-size:13px;margin-top:0}.satellite-flow li:not(:last-child):after{content:'\2195';top:auto;right:auto;bottom:-24px;left:0}.tech-diagram figcaption{font-size:13px}.wifi-flow{gap:20px}.wifi-flow strong{font-size:15px}.wifi-flow small{font-size:13px}.wifi-flow li:not(:last-child):after{right:-16px}.technology-page .wifi-note{font-size:14px;margin-top:22px}.hybrid-diagram{padding:5px 0}.tech-node strong{font-size:17px}.hybrid-sources{gap:20px}.hybrid-router{max-width:260px}.tech-energy .tech-photo img{aspect-ratio:1.16}.management-list{grid-template-columns:minmax(0,1fr);gap:24px}.management-list li:last-child{grid-column:auto}.management-list h3{font-size:23px}.tech-actions{flex-direction:column}.tech-actions .button{width:100%}.tech-cta h2{font-size:35px}.tech-cta-copy>p{font-size:16px}}
+@media(max-width:360px){.tech-opening h1{font-size:37px}.technology-page h2{font-size:31px}.technology-page .tech-foundation h2{font-size:26px}.wifi-flow strong{font-size:14px}.wifi-flow small{font-size:12px}.tech-node strong{font-size:16px}.hybrid-router{max-width:240px}.tech-cta h2{font-size:32px}}
+@media(prefers-reduced-motion:reduce){.technology-page *{scroll-behavior:auto;transition:none;animation:none}}
+
+@media(min-width:481px) and (max-width:600px){.tech-opening{padding-top:35px}}
